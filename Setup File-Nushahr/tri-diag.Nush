@@ -1,0 +1,121 @@
+
+********************************************************************************
+***
+*** Deltares, FLOW2D3D Version 6.02.10.6963M, May 21 2017, 10:49:58
+***           built from : https://svn.oss.deltares.nl/repos/delft3d/tags/6906
+***
+***           runid      : Nush
+***           date,time  : 2017-11-15, 10:46:03
+***
+********************************************************************************
+
+*** MESSAGE Executable for 64-bits platform. 
+*** MESSAGE Double precision computation using reals of kind    8 
+*** Start of User Defined Model description 
+ -
+ -  Nushahr                       
+ -
+*** End   of User Defined Model description 
+
+*** WARNING Ratio in layer thickness of the two bottom layers is larger than 1.5. 
+            May lead to inaccurate representation of the bottom boundary layer.
+ *** HLES subgrid viscosity model activated
+*** WARNING Background viscosity/diffusivity is added to the HLES contribution (since version 3.50.09.01) 
+*** MESSAGE Using UNESCO density formulation by default 
+ *** full scale free slip calculation for HLES
+*** MESSAGE Momentum solver cyclic method is specified 
+*** MESSAGE DRYFLP and DPSOPT both specified in MD-file. Using DPSOPT: MAX 
+*** MESSAGE Transport solver cyclic-method method is specified 
+*** MESSAGE All output files written in single precision.
+Sediment fraction  1: Sediment1           
+*** Start  of underlayer input
+Underlayer mechanism                    :                   1
+Boundary name                           :               North
+  Composition condition prescribed      :               fixed
+Boundary name                           :                West
+  Composition condition prescribed      :               fixed
+Boundary name                           :                East
+  Composition condition prescribed      :               fixed
+Initial bed composition                 :  from sediment file
+*** End    of underlayer input
+ 
+ 
+Determining transport formulation(s)
+ 
+*** Start  of sediment input
+Ref concentration                       :  0.1600E+04
+Option Dss                              :           0
+Uniform mud content                     :  0.0000E+00
+Sediment number                         :           1
+  Name                                  : Sediment1
+  Type                                  :        sand
+  RHOSOL                                :  0.2650E+04
+  sed. distribution                     :  piecewise loguniform
+  SedD10                                :  0.1500E-03
+  SedD50                                :  0.2000E-03
+  SedDM                                 :  0.2142E-03
+  SedD90                                :  0.3000E-03
+  CDRYB                                 :  0.1600E+04
+  Uniform IniThick                      :  0.5000E+01 [m]
+  FACDSS                                :  0.1000E+01
+    Formula name              : Van Rijn (1993)
+    Transport formula used    : -1
+    IopSus                    :  0.0000E+00
+    AksFac                    :  0.1000E+01
+    RWave                     :  0.2000E+01
+    RDC                       :  0.1000E-01
+    RDW                       :  0.2000E-01
+    IopKCW                    :  0.1000E+01
+    EpsPar                    :  0.0000E+00
+*** End    of sediment input
+ 
+*** Start  of morphological input
+Morphological Timescale Factor          :          0.1000E+01
+Morphological Changes Start Time (min)  :          0.1200E+03
+Fixed Layer Erosion Threshold           :          0.5000E-01
+Bed level updating                      :              ACTIVE
+Composition updating                    :              ACTIVE
+Entrainment/deposition flux in mass bal.:            INCLUDED
+Sand Equili. conc. profs. at boundaries :            NOT USED
+Mud  Equili. conc. profs. at boundaries :            NOT USED
+Sediment included in fluid density calc.:                  NO
+AKSFAC                                  :          0.1000E+01
+RWAVE                                   :          0.2000E+01
+Equilibrium sed. conc. profiles         :calculated (D3D mix)
+Suspended sed. multiplication factor    :          0.1000E+01
+Bed load transp. multiplication factor  :          0.1000E+01
+wave-rel. susp.sed.transp.fact.(SUSW)   :          0.1000E+01
+wave-rel. bed-ld.sed.transp.fact.(BEDW) :          0.1000E+01
+Min.depth for sed. calculations(SEDTHR) :          0.1000E+00
+Glob./max. dry cell erosion fact(THETSD):          0.1000E+01
+Max depth for variable THETSD (HMAXTH)  :          0.1500E+01
+Computing THETSD for dry bank erosion   
+Tuning param. Shields Taucr (FACTCR)    :          0.1000E+01
+GLM velocities i.s.o Eulerian velocities for bed load transport and reference conc:                  NO
+EPSPAR: Always use Van Rijns param. mix. dist. :                  NO
+Standard option: Rc from Flow, Rw=RWAVE*0.025 :                   1
+Update bed level at inflow boundaries   :                  NO
+Merge bottoms from parallel runs        :                  NO
+Source/sink limiter DZMAX(depth frac.)  :          0.5000E-01
+Max. volumetric ref. conc. CAMAX        :          0.6500E+00
+Hiding & exposure formulation           :                None
+Bed slope effect formulation            :             Bagnold
+ALFABS                                  :          0.1000E+01
+ALFABN                                  :          0.1500E+01
+Requested percentile(s)                 :             10.0000
+                                        :             50.0000
+                                        :             90.0000
+Output transport rates                  :  volume excl. pores
+Boundary name                           :               North
+  Depth prescribed                      :               fixed
+Boundary name                           :                West
+  Depth prescribed                      :               fixed
+Boundary name                           :                East
+  Depth prescribed                      :               fixed
+*** End    of morphological input
+ 
+*** MESSAGE Morphological Changes Start Time (step) : 7680 
+*** WARNING Latitude of your model is 0 degrees, model located at equator
+*** WARNING no stations and cross-sections defined; HIS-file not created !!
+ Creating new trim-Nush.dat
+ Creating new trim-Nush.def
